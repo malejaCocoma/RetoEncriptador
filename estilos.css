@@ -1,0 +1,195 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fc;
+    color: #0a3871;
+}
+
+.logo {
+    margin-top: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    gap: 30px;
+}
+
+.left-section {
+    flex: 2;
+    width: 60%;
+    position: relative;
+}
+
+.right-section {
+    flex: 1;
+    text-align: center;
+    background: #fff;
+    border-radius: 20px;    
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.textarea-container {
+    margin-bottom: 20px;
+}
+
+textarea {    
+    height: 400px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    resize: none;
+    font-size: 18px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+textarea::placeholder {
+    color: #0A3871; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+/* Quitar el borde al escribir */
+textarea:focus {
+    outline: none;
+    border: 2px solid transparent;
+}
+
+.texto {
+    background-color: #f4f7fc;
+}
+
+.buttons {
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+    gap: 15px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 15px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn-encrypt, .btn-decrypt {
+    height: 55px;
+    width: 100%;
+    max-width: 328px;
+    margin: 10px 0;
+}
+
+.btn-encrypt {
+    background-color: #0a3871;
+    color: white;
+    border: 1px solid #0A3871;
+}
+
+.btn-decrypt {
+    background-color: #f4f7fc;
+    color: #0a2c56;
+    border: 1px solid #0A3871;
+}
+
+.right-section img {
+    width: 80%;
+    max-width: 300px;
+    margin: 80px 0;
+}
+
+.right-section h3 {
+    color: #0a2c56;
+}
+
+/* Estilos del footer */
+.creditos {
+    background-color: #0a2c56;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 18px;
+    justify-content: center;
+}
+
+.btn-copy {
+    background-color: #f4f7fc;
+    color: #0a2c56;
+    border: 1px solid #0A3871;
+    height: 55px;
+    margin: 35px 0;  
+    width: 100%;
+    max-width: 300px;
+}
+
+/* Media Queries para Responsive Design */
+
+/* Tablets (pantallas medianas) */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .left-section, .right-section {
+        width: 100%;
+    }
+
+    textarea {
+        height: 300px;
+        max-width: 100%;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+}
+
+/* Smartphones (pantallas pequeñas) */
+@media (max-width: 480px) {
+    .textarea-container {
+        margin-bottom: 15px;
+    }
+
+    textarea {
+        height: 250px;
+        font-size: 16px;
+    }
+
+    .btn-encrypt, .btn-decrypt, .btn-copy {
+        max-width: 100%;
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .right-section img {
+        display: none;
+        margin: 40px 0;
+        max-width: 80%;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
